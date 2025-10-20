@@ -1,0 +1,440 @@
+/*
+-------------------------------------------------
+  Theme Name: nahal  Template
+  Theme URL: 
+  Author: nahal
+  Creation Date: 19-10-2025
+  Description:A default style sheet for nahal 
+  Version: 1.00
+
+
+  ---------------------------------------------------
+  Developed By: nahal 
+  Developer URL: amitpaultl@gmail.com
+  Developer: Amit Paul
+
+  ---------------------------------------------------
+
+  --------------------------------------------------
+  Table of Contents
+  --------------------------------------------------
+  1. Theme Color
+  2. google font
+  3. General Style
+  4. Typography
+  5. button
+  6. Preloader
+  7. header
+  8. side menu
+  9. dashboard
+  10. login
+  11. setting
+  12. Exam List
+  13. Pdf List
+
+------------------------------------------------ */
+
+/*--------------------------------
+1 Theme Color
+-----------------------------------*/
+:root {
+    --primary: #1A1A1A;
+    --secondary: #1B1B1B;
+    --dark-2: #4D4D4D;
+    --paragraph: #999999;
+    --background-color: #E4E6E9;
+    --origan: #FF880F;
+    --light-bg: #FFF7EE;
+    --dark-bg: #EFEFEF;
+    ;
+    --body-font-family: "Poppins", sans-serif;
+}
+
+
+
+/*-----------------------------------------------
+    2. google font  Start
+-------------------------------------------------*/
+
+
+/*-----------------------------------------------
+    2. General Style Start
+-------------------------------------------------*/
+* {
+    border: none;
+    outline: none;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    position: relative;
+    z-index: 1;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    letter-spacing: 0.0093rem;
+    font-family: var(--body-font-family);
+    color: var(--paragraph);
+}
+
+ul {
+    padding: 0;
+    word-break: break-all;
+}
+
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    word-break: break-all;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+input {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    word-break: break-all;
+}
+
+p {
+    color: var(--paragraph);
+    font-weight: 400;
+    word-break: break-all;
+
+}
+
+
+
+
+/*-------------------------------------------
+    3.Typography area start
+-------------------------------------------*/
+
+/* color text */
+
+.ar-paragraph {
+    color: var(--paragraph);
+}
+
+.ar-primary {
+    color: var(--primary);
+}
+
+.ar-dark-2 {
+    color: var(--dark-2);
+}
+
+
+/* color bg */
+
+.ar-primary-bg {
+    background-color: var(--primary);
+}
+
+.ar-light-bg {
+    background-color: var(--light-bg);
+}
+
+.ar-dark-bg {
+    background-color: var(--dark-bg);
+}
+
+/* font family */
+
+.ar-fi-roboto {
+    font-family: "Roboto", serif;
+}
+
+/* hover text */
+
+.underline:hover {
+    text-decoration: underline;
+}
+
+/* font size  */
+
+.ar-fs-50 {
+    font-size: 50px;
+    font-weight: 500;
+}
+
+
+.ar-fs-32 {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1px;
+}
+
+.ar-fs-18 {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.396px;
+}
+
+.ar-fs-16 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.208px;
+}
+
+.ar-fs-14 {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    letter-spacing: 0.14px;
+}
+
+
+/* margin area start */
+
+
+
+.ar-mb-30 {
+    margin-bottom: 30px;
+}
+
+.ar-mb-20 {
+    margin-bottom: 20px;
+}
+
+.ar-mb-15 {
+    margin-bottom: 15px;
+}
+
+.ar-mb-10 {
+    margin-bottom: 10px;
+}
+
+.ar-mb-5 {
+    margin-top: 5px;
+}
+
+/* padding area start */
+
+
+.ar-pb-30 {
+    padding-bottom: 30px;
+}
+
+.ar-padding {
+    padding: 37px 25px 33px 25px;
+}
+
+/* border */
+
+.ar-border-bottom {
+    border-bottom: 1px solid #56565633;
+}
+
+.after-unset::after {
+    content: unset !important;
+    position: unset !important;
+}
+
+
+/* gab */
+
+.ar-gab-10 {
+    gap: 10px;
+}
+
+/*  */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+
+/*-------------------------------------------
+    Typography area end
+-------------------------------------------*/
+
+/*-------------------------------------------
+    button area start
+-------------------------------------------*/
+
+.ar-theme-button {
+    padding: 15px 34px;
+    font-size: 16px;
+    border-radius: 16px;
+    display: inline-block;
+    font-weight: 700;
+    border: 1px solid var(--origan);
+    transition: .4s;
+    background: var(--origan);
+    color: var(--secondary);
+    text-align: center;
+    transition: .3s;
+
+}
+
+.ar-theme-button:hover {
+    background: transparent;
+}
+
+.ar-outline-btn {
+    padding: 15px 34px;
+    font-size: 14px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    border: 1px solid var(--origan);
+    transition: .4s;
+    background: transparent;
+    color: var(--origan);
+    text-align: center;
+    transition: .3s;
+
+}
+
+.ar-outline-btn:hover {
+    background: var(--origan);
+    color: var(--secondary);
+}
+
+
+/*-------------------------------------------
+    4.button area end
+-------------------------------------------*/
+
+/*-------------------------------------------
+   5 Preloader Area Start
+-------------------------------------------*/
+
+#arPreloaderBg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: var(--background-color);
+    z-index: 999999999999;
+    width: 100%;
+    height: 100%;
+}
+
+#arLoader {
+    width: 300px;
+    display: block;
+    align-content: center;
+    margin: 0 auto;
+    height: 100%;
+    text-align: center;
+}
+
+#bdfLoader img {
+    width: 100%;
+    height: auto;
+}
+
+
+/*-------------------------------------------
+    5 Preloader Area End
+  -------------------------------------------*/
+
+/*-------------------------------------------
+    6 menu Area start
+  -------------------------------------------*/
+
+/*-------------------------------------------
+    6 menu Area end
+  -------------------------------------------*/
+
+/*-------------------------------------------
+     product Area start
+  -------------------------------------------*/
+.ar-product-img {
+    max-height: 283px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.ar-category-img {
+    height: 90px;
+    width: 90px;
+    border: 6px solid #fff;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.ar-about-img img {
+    border: 36px solid var(--dark-bg);
+}
+
+/*-------------------------------------------
+     product Area end
+  -------------------------------------------*/
+
+/*-------------------------------------------
+     review Area start
+  -------------------------------------------*/
+
+  .ar-customer-img {
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+}
+
+.ar-review-padding {
+    position: relative;
+    padding: 95px 40px 60px;
+}
+
+.ar-customer-review {
+    position: absolute;
+    left: 50%;
+    top: -34px;
+    margin-left: -48px;
+}
+
+.ar-facebook-logo {
+    position: absolute;
+    right: -4px;
+    width: 29px;
+    bottom: 5px;
+    height: 29px;
+    border-radius: 50%;
+}
+
+.ar-customer-name.ar-primary {
+    border-top: 1px solid #C2C2C2;
+    padding-top: 20px;
+}
+
+.ar-blog-img {
+    width: 100%;
+    height: 224px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/*-------------------------------------------
+     review Area end
+  -------------------------------------------*/
