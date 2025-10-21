@@ -46,7 +46,6 @@
     --origan: #FF880F;
     --light-bg: #FFF7EE;
     --dark-bg: #EFEFEF;
-    ;
     --body-font-family: "Poppins", sans-serif;
 }
 
@@ -89,8 +88,6 @@ ul {
 
 li {
     list-style: none;
-    padding: 0;
-    margin: 0;
     word-break: break-all;
 }
 
@@ -106,14 +103,6 @@ input {
     box-sizing: border-box;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    word-break: break-all;
-}
 
 p {
     color: var(--paragraph);
@@ -172,66 +161,8 @@ p {
 
 /* font size  */
 
-.ar-fs-50 {
-    font-size: 50px;
-    font-weight: 500;
-}
-
-
-.ar-fs-32 {
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    letter-spacing: 1px;
-}
-
-.ar-fs-18 {
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 0.396px;
-}
-
-.ar-fs-16 {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.208px;
-}
-
-.ar-fs-14 {
-    font-size: 14px;
-    line-height: 22px;
-    font-weight: 400;
-    letter-spacing: 0.14px;
-}
-
-
 /* margin area start */
 
-
-
-.ar-mb-30 {
-    margin-bottom: 30px;
-}
-
-.ar-mb-20 {
-    margin-bottom: 20px;
-}
-
-.ar-mb-15 {
-    margin-bottom: 15px;
-}
-
-.ar-mb-10 {
-    margin-bottom: 10px;
-}
-
-.ar-mb-5 {
-    margin-top: 5px;
-}
 
 /* padding area start */
 
@@ -247,30 +178,20 @@ p {
 /* border */
 
 .ar-border-bottom {
-    border-bottom: 1px solid #56565633;
+    border-bottom: 1px solid #e1d6d6;
 }
 
-.after-unset::after {
-    content: unset !important;
-    position: unset !important;
+.ar-border-bottom-footer {
+    border-bottom: 1px solid #4A4A4A;
 }
 
-
-/* gab */
-
-.ar-gab-10 {
-    gap: 10px;
+.ar-line-height-150 {
+    line-height: 150%;
 }
 
-/*  */
-.cursor-pointer {
-    cursor: pointer;
+.list-style-auto {
+    list-style: disc;
 }
-
-.text-justify {
-    text-align: justify;
-}
-
 
 /*-------------------------------------------
     Typography area end
@@ -287,7 +208,6 @@ p {
     display: inline-block;
     font-weight: 700;
     border: 1px solid var(--origan);
-    transition: .4s;
     background: var(--origan);
     color: var(--secondary);
     text-align: center;
@@ -297,6 +217,7 @@ p {
 
 .ar-theme-button:hover {
     background: transparent;
+    color: var(--origan);
 }
 
 .ar-outline-btn {
@@ -308,7 +229,6 @@ p {
     align-items: center;
     font-weight: 700;
     border: 1px solid var(--origan);
-    transition: .4s;
     background: transparent;
     color: var(--origan);
     text-align: center;
@@ -319,6 +239,21 @@ p {
 .ar-outline-btn:hover {
     background: var(--origan);
     color: var(--secondary);
+}
+
+.ar-button-card{
+padding: 15px 40px;
+    font-size: 16px;
+    display: flex;
+    font-weight: 700;
+    border: 1px solid var(--origan);
+    background: var(--origan);
+    color: #fff;
+    text-align: center;
+    transition: .3s;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 
@@ -363,6 +298,35 @@ p {
     6 menu Area start
   -------------------------------------------*/
 
+.ar-banner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 30;
+    height: auto;
+}
+
+.owl-dots {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+button.owl-dot {
+    width: 10px;
+    height: 10px;
+    background: #7A7A7A !important;
+    border-radius: 50px;
+}
+
+button.owl-dot.active {
+    background: #FF880F !important;
+    width: 20px;
+}
+
 /*-------------------------------------------
     6 menu Area end
   -------------------------------------------*/
@@ -396,7 +360,7 @@ p {
      review Area start
   -------------------------------------------*/
 
-  .ar-customer-img {
+.ar-customer-img {
     width: 86px;
     height: 86px;
     border-radius: 50%;
@@ -435,6 +399,98 @@ p {
     border-radius: 8px;
 }
 
+.ar-radio-label {
+    border: 1px solid #E4E7E9;
+    padding: 7px 10px;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked+.ar-radio-label {
+    border: 1px solid var(--origan);
+    background: var(--origan);
+    color: #fff;
+}
+
+.ar-radio-label:hover {
+    border: 1px solid var(--origan);
+    background: var(--origan);
+    color: #fff;
+}
+
+.counter-box input::-webkit-outer-spin-button,
+.counter-box input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.counter-box {
+    border: 2px solid #E4E7E9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+
+.counter-box button {
+    width: 45px;
+    font-size: 26px;
+    color: #191C1F;
+    cursor: pointer;
+    height: 100%;
+}
+
+.counter-box .number {
+    width: 33px;
+    font-size: 16px;
+    color: #1A1A1A;
+}
+
+.ar-slider-img {
+    background: #E8E8E8;
+    border-radius: 17px;
+    padding: 34px;
+}
+
+.ar-slider-img img {
+    width: 100%;
+    border-radius: 17px;
+}
+
+.column img {
+    border-radius: 17px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
 /*-------------------------------------------
      review Area end
+  -------------------------------------------*/
+
+/*-------------------------------------------
+     footer Area start
+  -------------------------------------------*/
+
+.ar-social-icon-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ar-social-icon {
+    font-size: 18px;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    transition: .3s;
+}
+
+.ar-social-icon:hover {
+    background: var(--origan);
+}
+
+/*-------------------------------------------
+     footer Area end
   -------------------------------------------*/
